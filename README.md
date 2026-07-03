@@ -6,6 +6,8 @@
 [![Telegram](https://img.shields.io/badge/-Telegram-26A5E4?style=flat&logo=telegram&logoColor=white)](https://t.me/ikromoff14)
 [![Gmail](https://img.shields.io/badge/-Gmail-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:ikrombekmurodov7@gmail.com)
 
+<img src="assets/profile.png" width="220" align="right" alt="Ikrom Bekmurodov" />
+
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=58A6FF&width=600&lines=Backend+Developer+%F0%9F%9A%80;Python+%7C+FastAPI+%7C+Django+%7C+Node.js;PostgreSQL+%7C+Docker+%7C+CI%2FCD;Shipping+production+platforms+with+AI+agents)](https://git.io/typing-svg)
 
 - 🔭 I build and ship **production backend platforms** — currently at **Robbit**: [robbitonline.uz](https://robbitonline.uz) & [robbitquiz.uz](https://robbitquiz.uz)
@@ -34,10 +36,9 @@
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Ikrombek14&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117" height="160" alt="GitHub stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ikrombek14&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117" height="160" alt="Top languages" />
+<img src="https://streak-stats.demolab.com?user=Ikrombek14&theme=github-dark-blue&hide_border=true&background=0d1117" height="170" alt="GitHub streak" />
 
-<img src="https://streak-stats.demolab.com?user=Ikrombek14&theme=github-dark-blue&hide_border=true&background=0d1117" height="160" alt="GitHub streak" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Ikrombek14&theme=github-compact&hide_border=true&bg_color=0d1117&color=58a6ff&line=1f6feb&point=58a6ff" width="95%" alt="Contribution graph" />
 
 </div>
 
