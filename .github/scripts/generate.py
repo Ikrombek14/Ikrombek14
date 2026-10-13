@@ -357,7 +357,7 @@ def main():
         with open(os.path.join(OUT, name), "w", encoding="utf-8") as f:
             f.write(svg)
     files["meta.json"] = json.dumps({**SOURCE, "total": total, "eaten": len(eaten),
-                                     "generated": dt.datetime.utcnow().isoformat() + "Z"})
+                                     "generated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")})
     for name in ("meta.json",):
         with open(os.path.join(OUT, name), "w", encoding="utf-8") as f:
             f.write(files[name])
