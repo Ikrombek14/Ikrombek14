@@ -33,6 +33,7 @@ PAD_X, PAD_Y = 20, 34
 STEP_SEC = 0.12          # time the snake needs per grid step
 SNAKE_LEN = 5
 FONT = "Segoe UI,Helvetica,Arial,sans-serif"
+SOURCE = {}
 
 THEMES = {
     "light": {
@@ -129,15 +130,18 @@ def load_data():
         days, total = fetch_profile()
         if days:
             print(f"source: profile page ({len(days)} days)")
+            SOURCE["name"] = "profile-page"
             return days, total
         print("profile page had no calendar cells, falling back to GraphQL")
     except Exception as e:                    # noqa: BLE001 - any failure -> fallback
         print(f"profile page unavailable ({e}), falling back to GraphQL")
+        SOURCE["error"] = str(e)
     if RANGE.isdigit():
         start, end = f"{RANGE}-01-01", f"{RANGE}-12-31"
     else:
         today = dt.date.today()
         start, end = (today - dt.timedelta(days=365)).isoformat(), today.isoformat()
+    SOURCE["name"] = "graphql"
     return fetch_graphql(start, end)
 
 
@@ -352,6 +356,11 @@ def main():
     for name, svg in files.items():
         with open(os.path.join(OUT, name), "w", encoding="utf-8") as f:
             f.write(svg)
+    files["meta.json"] = json.dumps({**SOURCE, "total": total, "eaten": len(eaten),
+                                     "generated": dt.datetime.utcnow().isoformat() + "Z"})
+    for name in ("meta.json",):
+        with open(os.path.join(OUT, name), "w", encoding="utf-8") as f:
+            f.write(files[name])
     print(f"{USER} ({range_label(cells)}): {total} contributions, "
           f"{len(eaten)} cells eaten, {len(path)} steps, {cols} weeks")
 
