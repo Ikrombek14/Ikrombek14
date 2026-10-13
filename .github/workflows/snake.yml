@@ -2,8 +2,8 @@ name: Generate snake animation
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # har kuni bir marta yangilanadi
-  workflow_dispatch:       # Actions sahifasidan qo'lda ishga tushirish
+    - cron: "0 */6 * * *"   # har 6 soatda yangilanadi
+  workflow_dispatch:         # Actions sahifasidan qo'lda ishga tushirish
   push:
     branches: [main]
 
@@ -15,13 +15,19 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Generate snake SVGs
-        uses: Platane/snk@v3
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
         with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+          python-version: "3.12"
+
+      - name: Generate 2026 snake and contribution graph
+        run: python .github/scripts/generate.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+          YEAR: "2026"        # qaysi yil kalendari chizilsin
+          OUT_DIR: dist
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4

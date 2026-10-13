@@ -53,11 +53,11 @@
 
 <img src="https://streak-stats.demolab.com?user=Ikrombek14&theme=github-dark-blue&hide_border=true&background=0d1117" height="170" alt="GitHub streak" />
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Ikrombek14&theme=github-compact&hide_border=true&bg_color=0d1117&color=58a6ff&line=1f6feb&point=58a6ff" width="95%" alt="Contribution graph" />
+<img src="https://raw.githubusercontent.com/Ikrombek14/Ikrombek14/output/activity-graph.svg" width="95%" alt="Contribution graph 2026" />
 
 </div>
 
-## 🐍 Contribution Snake
+## 🐍 Contribution Snake · 2026
 
 <div align="center">
 
