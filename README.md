@@ -53,11 +53,11 @@
 
 <img src="https://streak-stats.demolab.com?user=Ikrombek14&theme=github-dark-blue&hide_border=true&background=0d1117" height="170" alt="GitHub streak" />
 
-<img src="https://raw.githubusercontent.com/Ikrombek14/Ikrombek14/output/activity-graph.svg" width="95%" alt="Contribution graph 2026" />
+<img src="https://raw.githubusercontent.com/Ikrombek14/Ikrombek14/output/activity-graph.svg" width="95%" alt="Contribution graph" />
 
 </div>
 
-## 🐍 Contribution Snake · 2026
+## 🐍 Contribution Snake
 
 <div align="center">
 

@@ -21,12 +21,12 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Generate 2026 snake and contribution graph
+      - name: Generate snake and contribution graph
         run: python .github/scripts/generate.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USER: ${{ github.repository_owner }}
-          YEAR: "2026"        # qaysi yil kalendari chizilsin
+          RANGE: last-year    # profildagi kalendar; ma'lum yil uchun "2026" deb yozing
           OUT_DIR: dist
 
       - name: Push to output branch
